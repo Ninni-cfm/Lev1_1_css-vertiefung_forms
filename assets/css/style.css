@@ -1,64 +1,86 @@
+/*****************************************************************************
+    Remove margin and padding for all elements
+*/
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-form{
-    width: 600px;
-    margin: 50px auto;
-    border:2px solid #4691a0;
-    padding: 0 1%;
-}
-label {
-    display: inline-block;
-    margin-top:15px;
-    font-weight: 700;
-}
-.required::after {
-    color: red;
-    content: ' *'
-}
-input, 
-select,
-textarea {
-    /* padding: 5px; */
-    font-size:1em;
-    border:2px solid silver;
-}
-.firstlastname {
-    display: inline-block;
-    width: 49.2%;
-}
-.firstlastname:last-of-type {
-    /* margin-left: 15px; */
-}
-#email,
-#topic {
-    width:100%;
-}
-textarea {
-    width:100%;
-    height: 150px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#submit {
+/*****************************************************************************
+    Setup some styles for the form
+*/
+form {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #4691a0;
+}
+
+/*****************************************************************************
+    Input area: labels and text fields
+*/
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-weight: 700;
-    margin:     20px auto 20px;
-    padding:    20px 0;
-    width:      100%;
+}
+/* for required fields */
+.required::after {
+    color: red;
+    content: " *";
+}
+#fname,
+#lname {
+    display: inline-block;
+    width: 47.1%;
+}
+input,
+textarea {
+    display: block;
+    width: 98%;
+    font-size: 0.6em;
+    border: 2px solid silver;
+    padding: 5px;
+}
+select {
+    display: block;
+    width: 100%;
+    background: whitesmoke;
+    font-size: 0.8em;
+    border: 2px solid silver;
+    padding: 5px;
+}
+textarea {
+    height: 100px;
+}
+/* special effects for focussed elements */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4691a0;
+    outline-color: #4691a0;
+}
+
+/*****************************************************************************
+    Submit button
+*/
+#submit {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1em;
+    margin: 40px auto 20px;
+    padding: 20px 0;
     border-style: none;
     background: #4691a0;
     color: white;
 }
 #submit:hover {
     background: black;
-}
-
-input:focus {
-    border: none;
-    outline:2px solid #4691a0;
-    opacity: 0.5;
 }
